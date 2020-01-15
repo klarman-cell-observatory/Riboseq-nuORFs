@@ -1,2 +1,13 @@
-this is my documentation
-New line added
+The scripts here include the analysis pipeline for variant incorporation into ORFs, determination of variant coverage across multiple sequencing datasets, combination with translation quantification, and neoantigen prediction. 
+
+The scripts should be executed in the following order:
+
+1. variant_pipeline.sh which incorporates:
+    1. variant_to_protein_gatk_only.py
+    2. variant_analysis.py
+    3. split_fasta.py (generate peptides)
+    4. mutation_protein_coordinates.py
+2. snv_coverage.sh (runs snv_coverage.py)
+3. coverage_across_samples.ipynb
+4. Run variant_peptides.sh (runs variant_peptides.py)
+5. neoantigen_analysis_snv.ipynb (generates potential neoantigens)
